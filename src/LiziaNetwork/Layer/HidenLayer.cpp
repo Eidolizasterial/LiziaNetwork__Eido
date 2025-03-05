@@ -167,6 +167,8 @@ void ln::HidenLayer::scalesDown(std::vector<unsigned int> id_s)
 
 	if (this->_count > 0) 
 	{
+		unsigned int counter = 0;
+		unsigned int indexer = 0;
 
 		this->_accumulator_s = new float[this->_count];
 		for (unsigned int i{ 0 }; i < this->_count; i++)
@@ -175,36 +177,47 @@ void ln::HidenLayer::scalesDown(std::vector<unsigned int> id_s)
 		}
 
 		std::vector<float> memory;
-		memory.resize(this->_count + id_s.size());
+		memory.resize(this->_count);
 
 		for (unsigned int i{ 0 }; i < this->_count + id_s.size(); i++)
 		{
-			memory[i] = this->_balance_s[i];
-		}
-
-		for (unsigned int i{ 0 }; i < id_s.size(); i++)
-		{
-
-		}
-
-		this->_resistance_s = new float[this->_count];
-		for (unsigned int i{ 0 }; i < this->_count; i++)
-		{
-			this->_resistance_s[i] = memory[i];
-		}
-
-		for (unsigned int i{ 0 }; i < this->_count + id_s.size(); i++)
-		{
-			for (unsigned int j{ 0 }; j < id_s.size(); j++)
+			if (i != id_s[indexer])
 			{
-				if (i != id_s[j])
+				memory[counter] = this->_balance_s[i];
+				counter++;
+			}
+			else
+			{
+				if (indexer < id_s.size() - 1)
 				{
-					memory[counter] = this->_resistance_s[i];
-					counter++;
+					indexer++;
 				}
 			}
 		}
+
+		this->_balance_s = new float[this->_count];
+		for (unsigned int i{ 0 }; i < this->_count; i++)
+		{
+			this->_balance_s[i] = memory[i];
+		}
 		counter = 0;
+		indexer = 0;
+
+		for (unsigned int i{ 0 }; i < this->_count + id_s.size(); i++)
+		{
+			if (i != id_s[indexer])
+			{
+				memory[counter] = this->_resistance_s[i];
+				counter++;
+			}
+			else
+			{
+				if (indexer < id_s.size() - 1)
+				{
+					indexer++;
+				}
+			}
+		}
 
 		this->_resistance_s = new float[this->_count];
 		for (unsigned int i{ 0 }; i < this->_count; i++)
@@ -229,11 +242,9 @@ void ln::HidenLayer::scalesDown(std::vector<unsigned int> id_s)
 
 void ln::HidenLayer::infoInConsole() const
 {
-	using namespace std;
+	std::cout << std::endl;
 
-	cout << endl;
-
-	cout
+	std::cout
 		<< "Hiden Layer	"
 		<< "Count: " << this->_count
 		<< " Activator: " << this->_activator;
@@ -242,10 +253,10 @@ void ln::HidenLayer::infoInConsole() const
 	{
 		if (i % 2 == 0)
 		{
-			cout << endl;
+			std::cout << std::endl;
 		}
 
-		cout
+		std::cout
 			<< "#" << i
 			<< ": " << this->_accumulator_s[i]
 			<< " || "
@@ -255,5 +266,5 @@ void ln::HidenLayer::infoInConsole() const
 			<< " || ";
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 }

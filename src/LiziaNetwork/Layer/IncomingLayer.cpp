@@ -78,11 +78,9 @@ void ln::IncomingLayer::scalesDown(unsigned int count)
 
 void ln::IncomingLayer::infoInConsole() const
 {
-	using namespace std;
+	std::cout << std::endl;
 
-	cout << endl;
-
-	cout
+	std::cout
 		<< "Incoming Layer	"
 		<< "Count: " << this->_count;
 
@@ -90,14 +88,14 @@ void ln::IncomingLayer::infoInConsole() const
 	{
 		if (i % 5 == 0)
 		{
-			cout << endl;
+			std::cout << std::endl;
 		}
 
-		cout 
+		std::cout
 			<< "#" << i
 			<< ": " << this->_accumulator_s[i]
 			<< " || ";
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 }

@@ -19,7 +19,7 @@ int main()
 
 	HL.infoInConsole();
 
-	HL.scalesDown(std::vector<unsigned int>{0, 3, 6});
+	HL.scalesDown(std::vector<unsigned int>{0, 2});
 
 	HL.infoInConsole();
 

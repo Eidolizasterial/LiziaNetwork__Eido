@@ -31,7 +31,7 @@ namespace ln
 		void discharging();
 
 		void scalesUp(unsigned int count);
-		void scalesDown(unsigned int id);
+		void scalesDown(std::vector<unsigned int> id_s);
 
 		void infoInConsole() const;
 	};
