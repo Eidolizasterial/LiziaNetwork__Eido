@@ -1,6 +1,7 @@
 #include "LiziaNetwork/Layer/BaseLayer.h"
 #include "LiziaNetwork/Layer/IncomingLayer.h"
 #include "LiziaNetwork/Layer/HidenLayer.h"
+#include "LiziaNetwork/Layer/OutgoingLayer.h"
 
 #include <iostream>
 
