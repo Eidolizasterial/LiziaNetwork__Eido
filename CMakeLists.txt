@@ -11,4 +11,8 @@ src/LiziaNetwork/Neuron/IncomingNeuron.h src/LiziaNetwork/Neuron/IncomingNeuron.
 src/LiziaNetwork/Layer/BaseLayer.h src/LiziaNetwork/Layer/BaseLayer.cpp 
 src/LiziaNetwork/Layer/IncomingLayer.h src/LiziaNetwork/Layer/IncomingLayer.cpp 
 src/LiziaNetwork/Layer/HidenLayer.h src/LiziaNetwork/Layer/HidenLayer.cpp 
-src/LiziaNetwork/Layer/OutgoingLayer.h src/LiziaNetwork/Layer/OutgoingLayer.cpp)
+src/LiziaNetwork/Layer/OutgoingLayer.h src/LiziaNetwork/Layer/OutgoingLayer.cpp 
+
+src/LiziaNetwork/NetworkSegment/NetworkSegment.h src/LiziaNetwork/NetworkSegment/NetworkSegment.cpp 
+src/LiziaNetwork/NetworkSegment/NetworkSegmentConstructor.h src/LiziaNetwork/NetworkSegment/NetworkSegmentConstructor.cpp 
+)

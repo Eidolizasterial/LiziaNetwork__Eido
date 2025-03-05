@@ -3,26 +3,33 @@
 #include "LiziaNetwork/Layer/HidenLayer.h"
 #include "LiziaNetwork/Layer/OutgoingLayer.h"
 
+#include"LiziaNetwork/NetworkSegment/NetworkSegment.h"
+#include"LiziaNetwork/NetworkSegment/NetworkSegmentConstructor.h"
+
 #include <iostream>
 
 int main()
 {	
+
+	ln::NetworkSegmentConstructor NSC;
+
 	bool run = true;
 	int a;
 
 	ln::IncomingLayer IL(4);
 	
-	ln::HidenLayer HL(6);
+	ln::HidenLayer HL1(6);
+	ln::HidenLayer HL2(3);
+	ln::HidenLayer HL3(4);
 
-	HL.infoInConsole();
+	ln::OutgoingLayer OL(3);
 
-	HL.scalesUp(2);
+	ln::NetworkSegment NS(3);
 
-	HL.infoInConsole();
+	NSC.initDefaultNetworkSegment(NS, IL, OL, std::vector<ln::HidenLayer>{HL1, HL2, HL3});
 
-	HL.scalesDown(std::vector<unsigned int>{0, 2});
-
-	HL.infoInConsole();
+	NS.infoInConsole();
+	
 
 	while (run)
 	{
