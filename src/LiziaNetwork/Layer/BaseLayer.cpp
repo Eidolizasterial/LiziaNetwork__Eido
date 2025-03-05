@@ -5,42 +5,12 @@ unsigned int ln::BaseLayer::get__count() const
 	return this->_count;
 }
 
-void ln::BaseLayer::charging()
+unsigned short ln::BaseLayer::get__activator() const
 {
-	///
-	///
-	/// 
-	/// 
+	return this->_activator;
 }
 
-void ln::BaseLayer::discharging()
+void ln::BaseLayer::change__activator(unsigned short activator)
 {
-	///
-	///
-	/// 
-	/// 
-}
-
-void ln::BaseLayer::scalesUp()
-{
-	///
-	///
-	/// 
-	/// 
-}
-
-void ln::BaseLayer::scalesDown()
-{
-	///
-	///
-	/// 
-	/// 
-}
-
-void ln::BaseLayer::infoInConsole() const
-{
-	///
-	///
-	/// 
-	/// 
+	this->_activator = activator;
 }

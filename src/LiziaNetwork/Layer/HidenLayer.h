@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseLayer.h"
+#include "../Neuron/DefaultNeuron.h"
 
 #include <iostream>
 #include <vector>
@@ -10,9 +11,7 @@ namespace ln
 	class HidenLayer : public BaseLayer
 	{
 	private:
-		float* _balance_s = nullptr;
-		float* _resistance_s = nullptr;
-		unsigned char _activator = 0;
+		DefaultNeuron* _neuron_s = nullptr;
 	public:
 		HidenLayer() = default;
 		HidenLayer(unsigned int count);
@@ -20,12 +19,7 @@ namespace ln
 		HidenLayer(const HidenLayer& __HidenLayer);
 		~HidenLayer() = default;
 
-		float* get__balance_s();
-
-		float* get__resistance_s();
-
-		unsigned char get__activator() const;
-		void change__activator(unsigned char activator);
+		DefaultNeuron* take__neuron_s();
 
 		void charging(float charge);
 		void discharging();
