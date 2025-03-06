@@ -34,5 +34,6 @@ namespace ln
 
 		std::vector<OutgoingSegmentData> executSendData();
 
+		void infoInConsole() const;
 	};
 }

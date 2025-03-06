@@ -20,4 +20,5 @@ src/LiziaNetwork/Network/EventDataStructure.h
 src/LiziaNetwork/Network/IncomingDataStructure.h 
 src/LiziaNetwork/Network/OutgoingDataStructure.h
 src/LiziaNetwork/Network/Network.h src/LiziaNetwork/Network/Network.cpp 
+src/LiziaNetwork/Network/NetworkConstructor.h src/LiziaNetwork/Network/NetworkConstructor.cpp 
 )
