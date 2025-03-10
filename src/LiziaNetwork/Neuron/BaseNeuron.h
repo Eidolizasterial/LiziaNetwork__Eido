@@ -10,7 +10,9 @@ namespace ln
 		BaseNeuron() = default;
 		~BaseNeuron() = default;
 		
+		float get__accumulator() const;
+
 		void charging(float charge);
-		void discharging();
+		float discharging();
 	};
 }

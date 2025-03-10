@@ -22,7 +22,7 @@ namespace ln
 		DefaultNeuron* take__neuron_s();
 
 		void charging(float charge);
-		void discharging();
+		float discharging(unsigned int neuron_id);
 
 		void scalesUp(unsigned int count);
 		void scalesDown(std::vector<unsigned int> id_s);

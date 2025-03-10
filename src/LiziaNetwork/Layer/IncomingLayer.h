@@ -19,8 +19,10 @@ namespace ln
 		IncomingLayer(const IncomingLayer& __IncomingLayer);
 		~IncomingLayer() = default;
 
+		IncomingNeuron* take__neuron_s();
+
 		void charging(unsigned int neuron_id, float charge);
-		void discharging();
+		float discharging(unsigned int neuron_id);
 
 		void scalesUp(unsigned int count);
 		void scalesDown(unsigned int count);

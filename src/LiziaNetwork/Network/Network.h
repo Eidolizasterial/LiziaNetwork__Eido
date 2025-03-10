@@ -27,13 +27,6 @@ namespace ln
 
 		std::vector<EventData>& take__EventData_s();
 
-
-		void executTakeData(std::vector<IncomingSegmentData> __IncomingSegmentData_s);
-
-		void executEventStack();
-
-		std::vector<OutgoingSegmentData> executSendData();
-
 		void infoInConsole() const;
 	};
 }

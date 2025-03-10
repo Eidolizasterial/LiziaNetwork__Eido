@@ -24,17 +24,23 @@ ln::IncomingLayer::IncomingLayer(const IncomingLayer& __IncomingLayer)
 	this->_neuron_s = new IncomingNeuron[this->_count];
 }
 
+ln::IncomingNeuron* ln::IncomingLayer::take__neuron_s()
+{
+	return this->_neuron_s;
+}
+
 void ln::IncomingLayer::charging(unsigned int neuron_id, float charge)
 {
 	this->_neuron_s[neuron_id].charging(charge);
 }
 
-void ln::IncomingLayer::discharging()
+float ln::IncomingLayer::discharging(unsigned int neuron_id)
 {
-	for (unsigned int i{ 0 }; i < this->_count; i++)
-	{
-		this->_neuron_s[i].discharging();
-	}
+	float charge = 0;
+
+	charge = this->_neuron_s[neuron_id].discharging();
+
+	return charge;
 }
 
 void ln::IncomingLayer::scalesUp(unsigned int count)

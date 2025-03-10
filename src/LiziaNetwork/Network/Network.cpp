@@ -20,21 +20,6 @@ std::vector<ln::EventData>& ln::Network::take__EventData_s()
 	return this->_EventData_s;
 }
 
-void ln::Network::executTakeData(std::vector<IncomingSegmentData> __IncomingSegmentData_s)
-{
-	///
-}
-
-void ln::Network::executEventStack()
-{
-	///
-}
-
-std::vector<ln::OutgoingSegmentData> ln::Network::executSendData()
-{
-	return std::vector<OutgoingSegmentData>{};
-}
-
 void ln::Network::infoInConsole() const
 {
 	std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!! Network !!!!!!!!!1!!!!!!!!!!!!!!!!!!!!!" << std::endl;

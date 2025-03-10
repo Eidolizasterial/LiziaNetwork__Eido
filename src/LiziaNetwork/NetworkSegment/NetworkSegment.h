@@ -4,31 +4,25 @@
 #include "../Layer/HidenLayer.h"
 #include "../Layer/OutgoingLayer.h"
 
-
 namespace ln
 {
 	class NetworkSegment
 	{
 	private:
-		unsigned int _hiden_layer_count = 0;
-
 		IncomingLayer _IncomingLayer;
 		OutgoingLayer _OutgoingLayer;
-
-		HidenLayer* _HidenLayer_s = nullptr;
+		std::vector<HidenLayer> _HidenLayer_s;
 	public:
 		NetworkSegment() = default;
-		NetworkSegment(unsigned int hiden_layer_count);
 		NetworkSegment(NetworkSegment& __NetworkSegment);
 		NetworkSegment(const NetworkSegment& __NetworkSegment);
 		~NetworkSegment() = default;
 
-		unsigned int get__hiden_layer_count() const;
-
 		IncomingLayer& get__IncomingLayer();
 		OutgoingLayer& get__OutgoingLayer();
+		std::vector<HidenLayer>& get__HidenLayer_s();
 
-		HidenLayer* get__HidenLayer_s();
+		std::vector<float> execut(std::vector<float> incoming_data);
 
 		void infoInConsole() const;
 	};

@@ -47,12 +47,13 @@ void ln::HidenLayer::charging(float charge)
 	}
 }
 
-void ln::HidenLayer::discharging()
+float ln::HidenLayer::discharging(unsigned int neuron_id)
 {
-	for (unsigned int i{ 0 }; i < this->_count; i++)
-	{
-		this->_neuron_s[i].discharging();
-	}
+	float charge = 0;
+
+	charge = this->_neuron_s[neuron_id].discharging();
+
+	return charge;
 }
 
 void ln::HidenLayer::scalesUp(unsigned int count)

@@ -14,11 +14,11 @@ src/LiziaNetwork/Layer/HidenLayer.h src/LiziaNetwork/Layer/HidenLayer.cpp
 src/LiziaNetwork/Layer/OutgoingLayer.h src/LiziaNetwork/Layer/OutgoingLayer.cpp 
 
 src/LiziaNetwork/NetworkSegment/NetworkSegment.h src/LiziaNetwork/NetworkSegment/NetworkSegment.cpp 
-src/LiziaNetwork/NetworkSegment/NetworkSegmentConstructor.h src/LiziaNetwork/NetworkSegment/NetworkSegmentConstructor.cpp 
 
 src/LiziaNetwork/Network/EventDataStructure.h
-src/LiziaNetwork/Network/IncomingDataStructure.h 
-src/LiziaNetwork/Network/OutgoingDataStructure.h
 src/LiziaNetwork/Network/Network.h src/LiziaNetwork/Network/Network.cpp 
 src/LiziaNetwork/Network/NetworkConstructor.h src/LiziaNetwork/Network/NetworkConstructor.cpp 
+
+src/LiziaNetwork/Driver/Driver.h src/LiziaNetwork/Driver/Driver.cpp 
+src/LiziaNetwork/Driver/Activators.h src/LiziaNetwork/Driver/Activators.cpp 
 )
